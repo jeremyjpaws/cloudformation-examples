@@ -1,0 +1,25 @@
+########In parent:
+
+{
+  "Parameters":{
+  ...
+  },
+  
+  "Resources":{
+    "ChildStack":{
+      
+        "Type" : "AWS::CloudFormation::Stack",
+        "Properties" : {
+          "NotificationARNs" : [ String, ... ],
+          "Parameters" : { 
+            "ValueFromParent":{"Ref":"ResourceInParent"},
+            ...
+          },
+          "Tags" : [ Resource Tag, ... ],
+          "TemplateURL" : String,
+          "TimeoutInMinutes" : String
+          }
+    }
+  }
+}
+   

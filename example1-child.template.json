@@ -1,0 +1,23 @@
+#### In child:
+
+{
+  "Parameters":{
+    "ValueFromParent":{
+      "Description": "I need this from the parent",
+      "Type": "String"
+    }
+  },
+  
+  "Resources":{
+     "SomeResourceThatReferencesAParentResource":{
+       "Type": ....,
+       "Properties":{
+          "SomeProperty":{"Ref":"ValueFromParent"}
+       }
+     }
+  }
+  
+  ## rest of my child template ##
+  
+}
+
